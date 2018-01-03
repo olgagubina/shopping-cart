@@ -150,6 +150,19 @@
     <script type="text/javascript" src="jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="bootstrap/dist/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="handlebars/dist/handlebars.min.js"></script>
+
+  <script id="cart-template" type="text/x-handlebars-template">
+      <p class="cart-title">Items in Cart</p>
+      <div class="cart-list">
+      {{#each items}}
+        <p>{{name}} - ${{price}}</p> 
+      {{/each}}
+      </div>
+      <p>Total: $<span class="total">{{total}}</span></p>
+      <button type="button" class="btn clear-cart">Clear Cart</button>
+  </script>
+
   <script type="text/javascript" src="script.js"></script>
+
 </body>
 </html>
